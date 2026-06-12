@@ -58,6 +58,22 @@ function mostrarTexto() {
 mostrarTexto();
 
 
+let audio = document.getElementById("alarma");
+
+  // Intentar reproducir automáticamente
+  window.onload = () => {
+    audio.volume = 1.0; // volumen máximo permitido
+    audio.play().catch(() => {
+      console.log("El navegador bloqueó el sonido automático");
+    });
+  };
+
+  // Forzar sonido al hacer clic en cualquier parte
+  document.body.addEventListener("click", () => {
+    audio.volume = 1.0;
+    audio.play();
+  });
+
   </script>
 
 </body>
