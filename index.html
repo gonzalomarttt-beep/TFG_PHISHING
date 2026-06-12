@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Contador</title>
   <style>
-   
+    
     body {
       font-family: Arial;
       text-align: center;
@@ -25,6 +25,7 @@
 
   <h1>TE HE HACKEADO PUTO IDIOTA</h1>
   <div id="contador">Cargando...</div>
+  <h1 id="texto"></h1>
 
   <script>
     // Cambia "miweb123" por un nombre único si quieres
@@ -35,11 +36,12 @@
       });
 
     
+
 const frases = [
   "IVAN TE HE ESTADO OBSERVANDO",
-  "TENGO FOTOS TUYAS COMPROMETIDAS ....",
+  "TENGO FOTOS TUYAS ....",
   "BESANDOTE CON URBANEJA",
-  "LAS BORRO POR 1 MILLLAR DE DOLARES"
+  "SI QUIERES TE LAS PASO"
 ];
 
 let i = 0;
@@ -48,11 +50,12 @@ function mostrarTexto() {
   if (i < frases.length) {
     document.getElementById("texto").innerText = frases[i];
     i++;
-    setTimeout(mostrarTexto, 2000); // 2 segundos
+    setTimeout(mostrarTexto, 2000);
   }
 }
 
 mostrarTexto();
+
 
   </script>
 
