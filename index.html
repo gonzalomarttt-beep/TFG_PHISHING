@@ -21,6 +21,11 @@
     }
   </style>
 </head>
+  
+<audio id="alarma" loop>
+  https://www.soundjay.com/misc/sounds/alarm-clock-01.mp3
+</audio>
+
 <body>
 
   <h1>TE HE HACKEADO PUTO IDIOTA</h1>
@@ -28,12 +33,21 @@
   <h1 id="texto"></h1>
 
   <script>
+
+    
     // Cambia "miweb123" por un nombre único si quieres
     fetch("https://api.countapi.xyz/hit/miweb123/visitas")
       .then(res => res.json())
       .then(data => {
         document.getElementById("contador").innerText = data.value;
       });
+
+const audio = document.getElementById("alarma");
+
+  document.body.addEventListener("click", function() {
+    audio.volume = 1.0;
+    audio.play();
+  });
 
     
 
@@ -58,21 +72,7 @@ function mostrarTexto() {
 mostrarTexto();
 
 
-let audio = document.getElementById("alarma");
 
-  // Intentar reproducir automáticamente
-  window.onload = () => {
-    audio.volume = 1.0; // volumen máximo permitido
-    audio.play().catch(() => {
-      console.log("El navegador bloqueó el sonido automático");
-    });
-  };
-
-  // Forzar sonido al hacer clic en cualquier parte
-  document.body.addEventListener("click", () => {
-    audio.volume = 1.0;
-    audio.play();
-  });
 
   </script>
 
