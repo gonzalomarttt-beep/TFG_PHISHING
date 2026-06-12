@@ -33,6 +33,27 @@
       .then(data => {
         document.getElementById("contador").innerText = data.value;
       });
+
+    
+const frases = [
+  "IVAN TE HE ESTADO OBSERVANDO",
+  "TENGO FOTOS TUYAS COMPROMETIDAS ....",
+  "BESANDOTE CON URBANEJA",
+  "LAS BORRO POR 1 MILLLAR DE DOLARES"
+];
+
+let i = 0;
+
+function mostrarTexto() {
+  if (i < frases.length) {
+    document.getElementById("texto").innerText = frases[i];
+    i++;
+    setTimeout(mostrarTexto, 2000); // 2 segundos
+  }
+}
+
+mostrarTexto();
+
   </script>
 
 </body>
